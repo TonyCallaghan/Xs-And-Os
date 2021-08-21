@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import Board from "./components/Board";
-import { calcWinner } from "./helpers";
-import "./styles/root.scss";
+import React, { useState } from 'react';
+import Board from './components/Board';
+import History from './components/History';
+import { calcWinner } from './helpers';
+import './styles/root.scss';
 
 const App = () => {
   const [history, setHistory] = useState([
@@ -37,11 +38,16 @@ const App = () => {
     setCurrentMove(prev => prev + 1);
   };
 
+  const moveTo = (move) => {
+    setCurrentMove(move)
+  }
+
   return (
     <div className="app">
       <h1>Xs & Os</h1>
       <h2>{message}</h2>
       <Board board={current.board} updateSquare={updateSquare} />
+      <History history={history} moveTo={moveTo} currentMove={currentMove} />
     </div>
   );
 };
