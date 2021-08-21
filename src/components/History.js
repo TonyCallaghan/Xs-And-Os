@@ -1,6 +1,6 @@
 import React from 'react'
 
-const History = ({ history, moveTo, currentMove }) => {
+const History = ({ history, moveTo, currentMove }) => { // Display Moves
     return (
         <ul>
             {history.map((_, move) => {
@@ -8,7 +8,7 @@ const History = ({ history, moveTo, currentMove }) => {
                     <li key={move}>
                         <button
                             style={{
-                                fontWeight: move === currentMove ? 'bold' : 'normal',
+                                fontWeight: move === currentMove ? 'bold' : 'normal', // Highlight currentMove by making it bold
                             }}
                             type="button"
                             onClick={() => {

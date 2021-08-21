@@ -14,6 +14,3 @@ const StatusMessage = ({ winner, current }) => {
 }
 
 export default StatusMessage
-// const message = winner
-// ? `Winner is ${winner}`
-// : `Next player is ${current.nextPlayer ? 'X' : 'O'}`

@@ -1,12 +1,16 @@
 import React from 'react'                       // {hook} for game state
 import Square from './Square'
 
-const Board = ({ board, updateSquare }) => {
-    const renderSquare = position => {        // Func to clean code below in board
+const Board = ({ board, updateSquare, winningSquares }) => {
+    const renderSquare = position => {
+
+        const isWinningSquare = winningSquares.includes(position)
+
         return (
             <Square
                 value={board[position]}
                 onClick={() => updateSquare(position)}
+                isWinningSquare={isWinningSquare}
             />
         );
     };
