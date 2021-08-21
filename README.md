@@ -17,4 +17,4 @@ Deployed with Surge for free:
 - `surge dist` upload dist file, then choose preferred domain
 
 ## Finished Game
-
+![Capture](https://user-images.githubusercontent.com/57832437/130329381-5d13d552-f424-4257-8c2a-41b667c2d23c.PNG)
